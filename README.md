@@ -42,7 +42,7 @@ https://tinyurl.com/y8sudxjy
 **Manufacturing Year Codes:**
 
 |Cisco Code | Manufacturing Year|
----------------------------------
+|-----------|-------------------|
 |01|1997| 
 |02|1998|
 |03|1999|
