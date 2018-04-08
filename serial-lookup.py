@@ -35,9 +35,11 @@ if len(sys.argv) != 2:
     print('\n>> Usage: ./serial-lookup.py SERIALNUMBER \n')
     exit()
 
-
+# 2nd argument ('Serial Number')
 serial = sys.argv[1]
 
+
+# Count the characters from the Serial Number in 2nd argument
 def count_letters(serial):
     counter = Counter()
     for word in serial.split():
@@ -46,6 +48,8 @@ def count_letters(serial):
 
 serial_counter = count_letters(serial)
 
+# If lower than 11 characters we get an error and the script stops.
+# If not, continue.
 if serial_counter < 11:
     print('\n'
           '>> Error: Serial Number must be 11 characters. \n'
@@ -54,7 +58,8 @@ if serial_counter < 11:
 else:
     pass
 
-
+# Group 1: Year code
+# Group 1: Week code
 REGEX = r'\w\w\w(\d\d)(\d\d)'
 
 m = re.match(REGEX, serial)
@@ -62,16 +67,17 @@ m = re.match(REGEX, serial)
 year_code = int(m.group(1))
 week_code = int(m.group(2))
 
-
+# Cisco's manufacturing years list (from year 1996 up to 2100).
 manuf_years = []
 for x in range(1996, 2100):
     manuf_years.append(x)
 
-
+# Dictionary that maps Cisco's year codes to Cisco's manufacturing years.
 numbers_manuf_years = {}
 for i in range(0, 100):
         numbers_manuf_years[i] = manuf_years[i]
 
+# Dictionary that maps Cisco's week codes to calendar Months.
 numbers_manuf_week = {
     1: 'January',
     2: 'January',
@@ -130,13 +136,16 @@ numbers_manuf_week = {
 
 print('\n>> Serial Number:', serial)
 
-
+# If parsed year code in dictionary, put it into variable "year".
+# If not, print error and make "year" variable empty.
 if year_code in numbers_manuf_years:
     year = (numbers_manuf_years[year_code])
 else:
     year = ''
     print('>> Error: Could not match year code!')
 
+# If parsed week code in dictionary, put it into variable "week".
+# If not, print error and make "week" variable empty.
 if week_code in numbers_manuf_week:
     week = (numbers_manuf_week[week_code])
 else:
