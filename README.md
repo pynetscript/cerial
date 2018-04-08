@@ -26,7 +26,7 @@ Script output:        Approximate manufacture date
 # .travis.yml
 
 - [Travis CI](https://travis-ci.org/pynetscript/serial-lookup)
-- What language: **Python**
+- What language: **Python** 
 - What versions: **2.7** , **3.4** , **3.5** , **3.6**
 - What to run: **python serial-lookup.py**
 - Where to send notifications: **pynetscript:3GF5L6jlBvYl9TA5mrcJ87rq** 
