@@ -27,8 +27,6 @@ from __future__ import unicode_literals
 
 import re
 import sys
-import string
-from pprint import pprint as pp
 from collections import Counter
 
 
