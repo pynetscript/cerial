@@ -11,6 +11,7 @@ Last modified date:   08/04/2018
 Version:              v1.1
 
 Script use:           Parses a Cisco serial number into an approximate manufacture date.
+                      Works only with 11 character cisco serial numbers.
                       The script needs 2 arguments to run:
                       - 1st argument: serial-number.py
                       - 2nd argument: SERIALNUMBER
@@ -106,8 +107,8 @@ Let's use the following example to explain the script:
 
 The script will:     
 - Count the characters from the Serial Number we specified (SAD08300D4W)
-  - If lower than 11 characters we get an error and the script stops.
-  - If not, continue.
+  - If not equal to 11 characters we get an error and the script stops.
+  - If 11 characters, continue.
 - Parse the year code.
 - Parse the week code.
 - Create Cisco's manufacturing years list (from year 1996 up to 2100).
@@ -116,6 +117,43 @@ The script will:
 - Print the Serial Number that was specified (SAD08300D4W).
 - If parsed year code in dictionary, put it into variable "year".
 - If parsed year code not in dictionary, print error ">> Error: Could not match year code!" and put nothing into variable "year".
+  - Note: Here there is no way i can't match because i have all values from 00 up to 99 in the dictionary but i like to have it here for understanding purposes.
 - If parsed week code in dictionary, put it into variable "week".
 - If parsed week code not in dictionary, print error ">> Error: Could not match week code!" and put nothing into variable "week".
 - Finally the script will print ">> Approximate manufacture date: **week** **year**".
+
+# Successful demo
+
+```
+aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W
+
+>> Serial Number: SAD08300D4W
+>> Approximate manufacture date: July 2004 
+
+```
+
+# Unsuccessful demo (S/N not equal to 11 chars)
+
+```
+aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4
+
+>> Error: Serial Number must be 11 characters. 
+          The Serial Number SAD08300D4 you specified is 10 characters. 
+          
+aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W1
+
+>> Error: Serial Number must be 11 characters. 
+          The Serial Number SAD08300D4W1 you specified is 12 characters. 
+
+```
+
+
+# Unsuccessful demo (bad week code)
+
+```
+aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08000D4W
+
+>> Serial Number: SAD08000D4W
+>> Error: Could not match week code!
+>> Approximate manufacture date:  2004 
+```
