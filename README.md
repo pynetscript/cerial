@@ -86,4 +86,4 @@ The script will:
 - If parsed year code not in dictionary, print error ">> Error: Could not match year code!" and put nothing into variable "year".
 - If parsed week code in dictionary, put it into variable "week".
 - If parsed week code not in dictionary, print error ">> Error: Could not match week code!" and put nothing into variable "week".
-- Finally the script will print ">> Approximate manufacture date:', week, year".
+- Finally the script will print ">> Approximate manufacture date: **week** **year**".
