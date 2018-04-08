@@ -17,31 +17,6 @@
 #
 # Script output:        Approximate manufacture date
 #                       Travis CI build notification to Slack private channel
-#
-# https://tinyurl.com/y8sudxjy
-#
-# Manufacturing Year Codes:
-#
-#   01 = 1997   06 = 2002   11 = 2007   16 = 2012   21 = 2017
-#   02 = 1998   07 = 2003   12 = 2008   17 = 2013   22 = 2018
-#   03 = 1999   08 = 2004   13 = 2009   18 = 2014   etc.
-#   04 = 2000   09 = 2005   14 = 2010   19 = 2015   
-#   05 = 2001   10 = 2006   15 = 2011   20 = 2016   
-#
-# Manufacturing Week Codes:
-#
-#   01-05 : January     15-18 : April   28-31 : July        41-44 : October
-#   06-09 : February    19-22 : May     32-35 : August      45-48 : November
-#   10-14 : March       23-27 : June    36-40 : September   49-52 : December
-#
-# The serial number will be in the format: 'LLLYYWWSSSS'
-#   'YY' is the year of manufacture
-#   'WW' is the week of manufacture. 
-# 
-# Example S/N: SAD08300D4W
-#   'YY' = 08 (year code)
-#   'WW' = 30 (week code)
-#   >> Approximate manufacture date: July 2004
 ###############################################################################
 
 
