@@ -7,6 +7,7 @@
 # Version:              v1.1
 #
 # Script use:           Parses a Cisco serial number into an approximate manufacture date.
+#                       Works only with 11 character cisco serial numbers.
 #                       The script needs 2 arguments to run:
 #                       - 1st argument: serial-number.py
 #                       - 2nd argument: SERIALNUMBER
@@ -48,24 +49,26 @@ def count_letters(serial):
 
 serial_counter = count_letters(serial)
 
-# If lower than 11 characters we get an error and the script stops.
-# If not, continue.
-if serial_counter < 11:
+# If not equal to 11 characters we get an error and the script stops.
+# If 11 characters, continue.
+if serial_counter != 11:
     print('\n'
           '>> Error: Serial Number must be 11 characters. \n'
-          '          The Serial Number you specified was', serial_counter, 'characters. \n')
+          '          The Serial Number', serial, 'you specified is', serial_counter, 'characters. \n')
     sys.exit()
 else:
     pass
 
-# Group 1: Year code
-# Group 1: Week code
+
+# Regex Group 1: Year code
+# Regex Group 1: Week code
 REGEX = r'\w\w\w(\d\d)(\d\d)'
 
 m = re.match(REGEX, serial)
 
 year_code = int(m.group(1))
 week_code = int(m.group(2))
+
 
 # Cisco's manufacturing years list (from year 1996 up to 2100).
 manuf_years = []
@@ -135,6 +138,7 @@ numbers_manuf_week = {
     
 
 print('\n>> Serial Number:', serial)
+
 
 # If parsed year code in dictionary, put it into variable "year".
 # If not, print error and make "year" variable empty.
