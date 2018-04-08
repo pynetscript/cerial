@@ -39,7 +39,7 @@ Script output:        Approximate manufacture date
 
 https://tinyurl.com/y8sudxjy
 
-## Manufacturing Year Codes:
+**Manufacturing Year Codes:**
 
 01 = 1997   06 = 2002   11 = 2007   16 = 2012   21 = 2017
 02 = 1998   07 = 2003   12 = 2008   17 = 2013   22 = 2018
@@ -47,7 +47,7 @@ https://tinyurl.com/y8sudxjy
 04 = 2000   09 = 2005   14 = 2010   19 = 2015   
 05 = 2001   10 = 2006   15 = 2011   20 = 2016   
 
-## Manufacturing Week Codes:
+**Manufacturing Week Codes:**
 
 01-05 : January     15-18 : April   28-31 : July        41-44 : October
 06-09 : February    19-22 : May     32-35 : August      45-48 : November
