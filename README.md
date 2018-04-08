@@ -68,11 +68,23 @@ https://tinyurl.com/y8sudxjy
 |etc.|etc.|
    
 **Manufacturing Week Codes:**
-  
-01-05 : January     15-18 : April   28-31 : July        41-44 : October   
-06-09 : February    19-22 : May     32-35 : August      45-48 : November   
-10-14 : March       23-27 : June    36-40 : September   49-52 : December   
-   
+
+
+|Cisco Code | Calendar Month|
+|-----------|---------------|
+|01-05 | January|
+|06-09 | February| 
+|10-14 | March|
+|15-18 | April|
+|19-22 | May|
+|23-27 | June|
+|28-31 | July|
+|32-35 | August|
+|36-40 | September|
+|41-44 | October|
+|45-48 | November| 
+|49-52 | December|
+
 The serial number will be in the format: 'LLLYYWWSSSS'
 - 'YY' is the year of manufacture
 - 'WW' is the week of manufacture. 
