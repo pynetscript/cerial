@@ -4,25 +4,21 @@
 
 # serial-lookup
 
-```
-Written by:           Aleks Lambreca
-Creation date:        08/04/2018
-Last modified date:   08/04/2018
-Version:              v1.1
+### Script use           
+- Parses a Cisco serial number into an approximate manufacture date.
+- Works only with 11 character cisco serial numbers.
+- The script needs 2 arguments to run:
+  - 1st argument: serial-number.py
+  - 2nd argument: SERIALNUMBER
+- Valid command looks like: `./serial-number.py SAD08300D4W`
 
-Script use:           Parses a Cisco serial number into an approximate manufacture date.
-                      Works only with 11 character cisco serial numbers.
-                      The script needs 2 arguments to run:
-                      - 1st argument: serial-number.py
-                      - 2nd argument: SERIALNUMBER
-                      Valid command looks like:
-                      ./serial-number.py SAD08300D4W
+### Script input         
+- Cisco serial number (S/N)
 
-Script input:         Cisco serial number
+### Script output
+- Approximate manufacture date
+- Travis CI build notification to Slack private channel
 
-Script output:        Approximate manufacture date
-                      Travis CI build notification to Slack private channel
-```
 
 # .travis.yml
 
@@ -38,9 +34,9 @@ Script output:        Approximate manufacture date
 
 # 2nd argument ('Serial Number')
 
-https://tinyurl.com/y8sudxjy
+- [Cisco doc](https://tinyurl.com/y8sudxjy)
 
-**Manufacturing Year Codes:**
+### Manufacturing Year Codes
 
 |Cisco Code | Manufacturing Year|
 |-----------|-------------------|
@@ -68,8 +64,7 @@ https://tinyurl.com/y8sudxjy
 |22|2018|
 |etc.|etc.|
    
-**Manufacturing Week Codes:**
-
+### Manufacturing Week Codes
 
 |Cisco Code | Calendar Month|
 |-----------|---------------|
@@ -97,7 +92,8 @@ Example S/N: 'SAD08300D4W'
   
 # 1st argument (serial-number.py)
   
-This is the script that we will run.   
+This is the script that we will run.  
+
 Legal examples:   
 - `python2 <1st_argument> <2nd_argument>`
 - `python3 <1st_argument> <2nd_argument>`
@@ -122,6 +118,7 @@ The script will:
 - If parsed week code not in dictionary, print error ">> Error: Could not match week code!" and put nothing into variable "week".
 - Finally the script will print ">> Approximate manufacture date: **week** **year**".
 
+
 # Successful demo
 
 ```
@@ -131,6 +128,7 @@ aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W
 >> Approximate manufacture date: July 2004 
 
 ```
+
 
 # Unsuccessful demo (S/N not equal to 11 chars)
 
