@@ -34,7 +34,7 @@
 
 # 2nd argument ('Serial Number')
 
-- [Cisco doc](https://tinyurl.com/y8sudxjy)
+- [Cisco doc](https://supportforums.cisco.com/t5/lan-switching-and-routing/cisco-serial-number-lookups/td-p/1375234)
 
 ### Manufacturing Year Codes
 
