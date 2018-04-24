@@ -137,11 +137,11 @@ aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4
 
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4 you specified is 10 characters. 
-          
-aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W1
 ```
 
 ```
+aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W1
+
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4W1 you specified is 12 characters. 
 
