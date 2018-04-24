@@ -3,7 +3,7 @@
 ###############################################################################
 # Written by:           Aleks Lambreca
 # Creation date:        08/04/2018
-# Last modified date:   08/04/2018
+# Last modified date:   24/04/2018
 # Version:              v1.1
 #
 # Script use:           Parses a Cisco serial number into an approximate manufacture date.
