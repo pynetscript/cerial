@@ -6,7 +6,7 @@
 # Last modified date:   24/04/2018
 # Version:              v1.1
 #
-# Script use:           Parses a Cisco serial number into an approximate manufacture date.
+# Script use:           Parse a Cisco serial number into an approximate manufacture date.
 #                       Works only with 11 character cisco serial numbers.
 #                       The script needs 2 arguments to run:
 #                       - 1st argument: serial-number.py
