@@ -11,8 +11,7 @@
 #                       The script needs 2 arguments to run:
 #                       - 1st argument: serial-number.py
 #                       - 2nd argument: SERIALNUMBER
-#                       Valid command looks like:
-#                       ./serial-number.py SAD08300D4W
+#                       Valid command looks like: "./serial-number.py SAD08300D4W"
 #
 # Script input:         Cisco serial number
 #
@@ -34,7 +33,7 @@ from collections import Counter
 
 # If arguments not equal to 2 we get an error.
 if len(sys.argv) != 2:
-    print('\n>> Usage: ./serial-lookup.py SERIALNUMBER \n')
+    print('\n>> Usage: ./serial-lookup.py SERIALNUMBER')
     exit()
 
 # 2nd argument ('Serial Number')
@@ -55,7 +54,7 @@ serial_counter = count_letters(serial)
 if serial_counter != 11:
     print('\n'
           '>> Error: Serial Number must be 11 characters. \n'
-          '          The Serial Number', serial, 'you specified is', serial_counter, 'characters. \n')
+          '          The Serial Number', serial, 'you specified is', serial_counter, 'characters.')
     sys.exit()
 else:
     pass
@@ -158,4 +157,4 @@ else:
     print('>> Error: Could not match week code!')
 
 
-print('>> Approximate manufacture date:', week, year,'\n')
+print('>> Approximate manufacture date:', week, year)
