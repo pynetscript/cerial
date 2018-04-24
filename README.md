@@ -126,7 +126,6 @@ aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W
 
 >> Serial Number: SAD08300D4W
 >> Approximate manufacture date: July 2004 
-
 ```
 
 
