@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/pynetscript/serial-lookup.svg?branch=master)](https://travis-ci.org/pynetscript/serial-lookup)
 [![GitHub release](https://img.shields.io/badge/version-1.1-blue.svg)](https://github.com/pynetscript/serial-lookup)
-[![license](https://img.shields.io/github/license/pynetscript/serial-lookup.svg)](https://github.com/pynetscript/serial-lookup/blob/master/LICENSE)
+
 
 # serial-lookup
 
