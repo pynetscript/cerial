@@ -3,20 +3,8 @@
 ###############################################################################
 # Written by:           Aleks Lambreca
 # Creation date:        08/04/2018
-# Last modified date:   24/04/2018
+# Last modified date:   21/08/2018
 # Version:              v1.1
-#
-# Script use:           Parse a Cisco serial number into an approximate manufacture date.
-#                       Works only with 11 character cisco serial numbers.
-#                       The script needs 2 arguments to run:
-#                       - 1st argument: serial-number.py
-#                       - 2nd argument: SERIALNUMBER
-#                       Valid command looks like: "./serial-number.py SAD08300D4W"
-#
-# Script input:         Cisco serial number
-#
-# Script output:        Approximate manufacture date
-#                       Travis CI build notification to Slack private channel
 ###############################################################################
 
 
