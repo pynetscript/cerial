@@ -10,7 +10,7 @@
 - The script needs 2 arguments to run:
   - 1st argument: serial-number.py
   - 2nd argument: SERIALNUMBER
-- Valid command looks like: `./serial-number.py SAD08300D4W`
+- Valid command looks like: `./serial-lookup.py SAD08300D4W`
 
 ### Script input         
 - Cisco serial number (S/N)
