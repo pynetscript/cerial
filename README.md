@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pynetscript/serial-lookup.svg?branch=master)](https://travis-ci.org/pynetscript/serial-lookup)
+[![Build Status](https://travis-ci.org/pynetscript/cerial.svg?branch=master)](https://travis-ci.org/pynetscript/cerial)
 [![GitHub release](https://img.shields.io/badge/version-1.1-blue.svg)](https://github.com/pynetscript/serial-lookup)
 
 
