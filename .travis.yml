@@ -4,6 +4,6 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-script: python cerial.py
+script: python runner.py
 notifications:
    slack: pynetscript:3GF5L6jlBvYl9TA5mrcJ87rq
