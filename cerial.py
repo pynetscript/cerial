@@ -21,7 +21,7 @@ from collections import Counter
 
 # If arguments not equal to 2 we get an error.
 if len(sys.argv) != 2:
-    print('\n>> Usage: ./runner.py SERIALNUMBER')
+    print('\n>> Usage: ./cerial.py SERIALNUMBER')
     exit()
 
 # 2nd argument ('Serial Number')
