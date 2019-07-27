@@ -2,35 +2,21 @@
 [![GitHub release](https://img.shields.io/badge/version-1.1-blue.svg)](https://github.com/pynetscript/serial-lookup)
 
 
-# serial-lookup
+# runner.py
 
 ### Script use           
 - Parse a Cisco serial number into an approximate manufacture date.
 - Works only with 11 character cisco serial numbers.
 - The script needs 2 arguments to run:
-  - 1st argument: serial-number.py
+  - 1st argument: runner.py
   - 2nd argument: SERIALNUMBER
-- Valid command looks like: `./serial-lookup.py SAD08300D4W`
+- Valid command looks like: `./runner.py SAD08300D4W`
 
 ### Script input         
 - Cisco serial number (S/N)
 
 ### Script output
 - Approximate manufacture date
-- Travis CI build notification to Slack private channel
-
-
-# .travis.yml
-
-- [Travis CI](https://travis-ci.org/pynetscript/serial-lookup)
-- What language: **Python** 
-- What versions: **2.7** , **3.4** , **3.5** , **3.6**
-- What to run: **python serial-lookup.py**
-- Where to send notifications: **pynetscript:3GF5L6jlBvYl9TA5mrcJ87rq** 
-  - Install Travis CI on [Slack](https://pynetscript.slack.com) and at some point it will output a slack channel to use.
-  - Replace **pynetscript:3GF5L6jlBvYl9TA5mrcJ87rq** with your own channel.
-  - Supports private channels.
-  
 
 # 2nd argument ('Serial Number')
 
@@ -90,7 +76,7 @@ Example S/N: 'SAD08300D4W'
 - 'WW' = 30 (week code)
   
   
-# 1st argument (serial-number.py)
+# 1st argument (runner.py)
   
 This is the script that we will run.  
 
@@ -99,7 +85,7 @@ Legal examples:
 - `python3 <1st_argument> <2nd_argument>`
 
 Let's use the following example to explain the script:    
-- `python3 serial-lookup.py SAD08300D4W`
+- `python3 runner.py SAD08300D4W`
 
 The script will:     
 - Count the characters from the Serial Number we specified (SAD08300D4W)
@@ -122,7 +108,7 @@ The script will:
 # Successful demo
 
 ```
-aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W
+aleks@acorp:~/cerial$ python3 runner.py SAD08300D4W
 
 >> Serial Number: SAD08300D4W
 >> Approximate manufacture date: July 2004 
@@ -132,14 +118,14 @@ aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W
 # Unsuccessful demo (S/N not equal to 11 chars)
 
 ```
-aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4
+aleks@acorp:~/cerial$ python3 runner.py SAD08300D4
 
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4 you specified is 10 characters. 
 ```
 
 ```
-aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W1
+aleks@acorp:~/cerial$ python3 runner.py  SAD08300D4W1
 
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4W1 you specified is 12 characters. 
@@ -149,7 +135,7 @@ aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08300D4W1
 # Unsuccessful demo (bad week code)
 
 ```
-aleks@acorp:~/serial-lookup$ python3 serial-lookup.py SAD08000D4W
+aleks@acorp:~/cerial$ python3 runner.py  SAD08000D4W
 
 >> Serial Number: SAD08000D4W
 >> Error: Could not match week code!
