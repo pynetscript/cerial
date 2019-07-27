@@ -125,7 +125,7 @@ aleks@acorp:~/cerial$ python3 cerial.py SAD08300D4
 ```
 
 ```
-aleks@acorp:~/cerial$ python3 cerial.py  SAD08300D4W1
+aleks@acorp:~/cerial$ python3 cerial.py SAD08300D4W1
 
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4W1 you specified is 12 characters. 
@@ -135,7 +135,7 @@ aleks@acorp:~/cerial$ python3 cerial.py  SAD08300D4W1
 # Unsuccessful demo (bad week code)
 
 ```
-aleks@acorp:~/cerial$ python3 cerial.py  SAD08000D4W
+aleks@acorp:~/cerial$ python3 cerial.py SAD08000D4W
 
 >> Serial Number: SAD08000D4W
 >> Error: Could not match week code!
