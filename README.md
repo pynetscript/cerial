@@ -2,15 +2,15 @@
 [![GitHub release](https://img.shields.io/badge/version-1.1-blue.svg)](https://github.com/pynetscript/serial-lookup)
 
 
-# runner.py
+# cerial.py
 
 ### Script use           
 - Parse a Cisco serial number into an approximate manufacture date.
 - Works only with 11 character cisco serial numbers.
 - The script needs 2 arguments to run:
-  - 1st argument: runner.py
+  - 1st argument: cerial.py
   - 2nd argument: SERIALNUMBER
-- Valid command looks like: `./runner.py SAD08300D4W`
+- Valid command looks like: `./cerial.py SAD08300D4W`
 
 ### Script input         
 - Cisco serial number (S/N)
@@ -76,7 +76,7 @@ Example S/N: 'SAD08300D4W'
 - 'WW' = 30 (week code)
   
   
-# 1st argument (runner.py)
+# 1st argument (cerial.py)
   
 This is the script that we will run.  
 
@@ -85,7 +85,7 @@ Legal examples:
 - `python3 <1st_argument> <2nd_argument>`
 
 Let's use the following example to explain the script:    
-- `python3 runner.py SAD08300D4W`
+- `python3 cerial.py SAD08300D4W`
 
 The script will:     
 - Count the characters from the Serial Number we specified (SAD08300D4W)
@@ -108,7 +108,7 @@ The script will:
 # Successful demo
 
 ```
-aleks@acorp:~/cerial$ python3 runner.py SAD08300D4W
+aleks@acorp:~/cerial$ python3 cerial.py SAD08300D4W
 
 >> Serial Number: SAD08300D4W
 >> Approximate manufacture date: July 2004 
@@ -118,14 +118,14 @@ aleks@acorp:~/cerial$ python3 runner.py SAD08300D4W
 # Unsuccessful demo (S/N not equal to 11 chars)
 
 ```
-aleks@acorp:~/cerial$ python3 runner.py SAD08300D4
+aleks@acorp:~/cerial$ python3 cerial.py SAD08300D4
 
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4 you specified is 10 characters. 
 ```
 
 ```
-aleks@acorp:~/cerial$ python3 runner.py  SAD08300D4W1
+aleks@acorp:~/cerial$ python3 cerial.py  SAD08300D4W1
 
 >> Error: Serial Number must be 11 characters. 
           The Serial Number SAD08300D4W1 you specified is 12 characters. 
@@ -135,7 +135,7 @@ aleks@acorp:~/cerial$ python3 runner.py  SAD08300D4W1
 # Unsuccessful demo (bad week code)
 
 ```
-aleks@acorp:~/cerial$ python3 runner.py  SAD08000D4W
+aleks@acorp:~/cerial$ python3 cerial.py  SAD08000D4W
 
 >> Serial Number: SAD08000D4W
 >> Error: Could not match week code!
